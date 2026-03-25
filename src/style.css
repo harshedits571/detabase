@@ -153,7 +153,7 @@ div.device-row:hover {
    border-color: rgba(255,255,255,0.05) !important;
    transform: translateX(4px);
 }
-tr.device-row td { padding: 16px; font-size: 13px; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.02); }
+tr.device-row td { padding: 16px; font-size: 13px; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.02); white-space: nowrap; }
 tr.device-row:hover { background: rgba(255,255,255,0.03) !important; }
 tr.device-row.active { background: rgba(255,255,255,0.07) !important; }
 
@@ -332,7 +332,8 @@ button[onclick^="forceLogout"]:hover {
   }
 
   .viewport-scroll {
-    padding: 0;
+    padding: 0 0 40px 0;
+    -webkit-overflow-scrolling: touch;
   }
 
   .bento-grid {
@@ -350,6 +351,7 @@ button[onclick^="forceLogout"]:hover {
   .modern-table {
     display: block;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .page-title h1 {
@@ -373,6 +375,9 @@ button[onclick^="forceLogout"]:hover {
     z-index: 100;
     overflow-y: auto;
     display: none;
+    background: #0d0d0f !important; /* Solid background so table doesn't bleed through */
+    box-shadow: 0 20px 60px rgba(0,0,0,1) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
   }
 
   /* Show a close button or similar for inspector on mobile */
