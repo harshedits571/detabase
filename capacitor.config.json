@@ -3,7 +3,7 @@
   "appName": "EW OS Dashboard",
   "webDir": "dist",
   "server": {
-    "url": "https://harshedits571.github.io/database/",
+    "url": "https://harshedits571.github.io/detabase/",
     "cleartext": true
   }
 }
