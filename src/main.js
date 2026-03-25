@@ -287,7 +287,7 @@ function renderUserBase() {
         let mainDevice = "Unknown";
         let devCount = 0;
         let lastTime = 0;
-        let gumroadKey = data.licenseKey || "---";
+        let gumroadKey = data.licenseKey || (data.license && data.license.key) || "---";
 
         Object.keys(data).forEach(k => {
             if (k.startsWith('device_') || k.startsWith('dev_')) {
@@ -353,7 +353,7 @@ function selectUser(safeEmail) {
         }
     });
 
-    let gumroadKey = userData.licenseKey || "---";
+    let gumroadKey = userData.licenseKey || (userData.license && userData.license.key) || "---";
     Object.keys(userData).forEach(k => {
         if ((k.startsWith('device_') || k.startsWith('dev_')) && (userData[k].licenseKey && userData[k].licenseKey !== "---")) {
             gumroadKey = userData[k].licenseKey;

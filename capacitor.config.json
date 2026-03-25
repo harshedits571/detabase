@@ -1,0 +1,10 @@
+{
+  "appId": "com.ewos.dashboard",
+  "appName": "EW OS Dashboard",
+  "webDir": "dist",
+  "server": {
+    "url": "https://harshedits571.github.io/database/",
+    "cleartext": true
+  }
+}
+
